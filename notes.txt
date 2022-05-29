@@ -1,0 +1,522 @@
+-----------------------------------------------------------------
+----------------------------- HTML5 -----------------------------
+-----------------------------------------------------------------
+
+HTML stands for HyperText Markup Language and is a language made 
+to tag data which links several documents and the structure these have
+
+It's used to create web sites for the world wide web.
+
+An HTML file contains elements and structures designated by tags 
+and attributes
+Every file from this HTML5 course will be stored on the 
+'/resources' folder
+
+-----------------------------------------------------------------
+-------------------------- HTML5 Tags ---------------------------
+-----------------------------------------------------------------
+HTML tags are meant to be at the beginning and at the end of the tagged
+content
+
+<tagname>'Content'</tagname>
+
+'tagname' stands for the type of tag. Note that it has two parts
+differenciated one from another with the usage of a slash '/' 
+at the second tag. The one with the '/' is the 'closing tag'
+
+Whatever is the word after the '<' from a tag is the tag/element
+name
+
+Tags can have tags within them
+
+<tagname1>'Content'
+<tagname2>'Some other content'</tagname2>
+</tagname1>
+
+The tag that contains another tag is called 'father tag' and the tag
+contained is called 'children tag'
+
+There's another type of tag that is the selfclosing tag that 
+doesn't have a 'closing tag'
+
+There are 3 main tags required to bould a website:
+- <html></html>
+- <head></head>
+- <body></body>
+
+Note that the 'html' tag is the father of every other tag from the 
+website
+
+-----------------------------------------------------------------
+----------------------- HTML5 Simple HTML -----------------------
+------------------------------ file -----------------------------
+-----------------------------------------------------------------
+
+File: /resources/1-simple_html.html
+
+From VSCode, to create an simple HTML5 file there has to be 
+created one '.html' file, and then, to call a tamplate there can 
+be pressed shit+1 and then tab to deploy a HTML template. This 
+template is deployed by the Emet VSCode extension
+
+This is the basic template offered
+
+'<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a Simple HTML Page</title>
+</head>
+<body>
+    This is the first HTML page created in this course
+</body>
+</html>'
+
+Note these elements within the template
+- The <!DOCTYPE html> indicates the type of document we are working with
+which is in ths case 'html'. This is a selfclosing tag
+- On the HTML tag there's the specification 'lang="en"'. This is called
+an attribute and is associated to a value, here it can be said that the
+'lang' attribute have the 'en' value. This is a default value which has 
+to be secified to indicate what's the language abbreviation under the
+ISO 639-1 standard language codes
+- There are chid tags within the 'head' tag. These tags named 'meta' 
+provide an attribute called 'charset' with a value equal to 'UTF-8'.
+This attribute refers to the type of character encoding supported by
+HTML5 and these can be the next standards: UTF-8, UTF-16, Windows-1252 
+and ISO-8859
+- The 'meta' tags are another example of selfclosing tabs and these are
+meant to store attributes. The shoen attributes will be defined next:
+
+-----------------------------------------------------------------
+From
+https://www.w3schools.com/tags/att_meta_http_equiv.asp
+
+- The 'http-equiv' attribute provides an HTTP header for the information/
+value of the content attribute. The 'http-equiv' attribute can be used to
+simulate an HTTP response header.
+
+content-security-policy	Specifies a content policy for the document.
+Example:
+<meta http-equiv="content-security-policy" content="default-src 'self'">
+
+content-type	Specifies the character encoding for the document.
+Example:
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+default-style	Specified the preferred style sheet to use.
+Example:
+<meta http-equiv="default-style" content="the document's preferred stylesheet">
+Note: The value of the content attribute above must match the value of the 
+title attribute on a link element in the same document, or it must match the 
+value of the title attribute on a style element in the same document.
+
+refresh	Defines a time interval for the document to refresh itself.
+Example:
+<meta http-equiv="refresh" content="300">
+Note: The value "refresh" should be used carefully, as it takes the control 
+of a page away from the user. Using "refresh" will cause a failure in W3C's 
+Web Content Accessibility Guidelines.
+
+In the particular case, the 'X-UA-Compatible' stands for the supported 
+document compatibility. It's used to add compatibility to IE which 
+obligues IE to use the lastest local version of rendering in standards 
+mode or using the Chrome's Kernel.
+-----------------------------------------------------------------
+From
+https://www.w3schools.com/tags/tag_meta.asp
+
+- The viewport is the user's visible area of a web page. It varies with the 
+device - it will be smaller on a mobile phone than on a computer screen.
+
+You should include the following <meta> element in all your web pages:
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+This gives the browser instructions on how to control the page's dimensions 
+and scaling.
+
+The width=device-width part sets the width of the page to follow the 
+screen-width of the device (which will vary depending on the device).
+
+The initial-scale=1.0 part sets the initial zoom level when the page is first 
+loaded by the browser.
+
+Here is an example of a web page without the viewport meta tag, and the 
+same web page with the viewport meta tag:
+
+Tip: If you are browsing this page with a phone or a tablet, you can click 
+on the two links below to see the difference.
+-----------------------------------------------------------------
+
+Every tag included within the '<head></head>' tag is meant to specify the 
+behaviour that the HTML document and the browser should have, and it's 
+content wont be explicitly displayed by the browser
+
+In the other hand, every tag included wthin the '<body></body>' tag stores
+the data meant to be shown by the browser. In this case is shown the text
+'This is the first HTML page created in this course'
+
+There's also another tag that shows data which can be seen in the tab text
+once opened the file in a web browser
+
+Note: In VSCode can be exceted every HTML file using the 'Live server' 
+extension. To make it work I had to apply this value to the settings json
+file available in the settings option of the extension  
+"liveServer.settings.AdvanceCustomBrowserCmdLine":"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+copy and paste it including the "" under the last value between '{}'. Make 
+sure that the last line ends with a ','
+
+-----------------------------------------------------------------
+------------------------- HTML5 Elements ------------------------
+-----------------------------------------------------------------
+
+File: /resources/2-elements.html
+
+Starting from the file '/resources/1-simple_html.html' there will be 
+created a new HTML element in the '<body></body>' and it will be the next
+element:
+
+<h1>HTML and python</h1>
+
+The way to create a nested element consists in two aspects:
+1 - It must be between the opening and closing tag
+2 - It must have a higher level of indentation than the father element
+
+This whole line of code is called element
+Is composed by:
+1 - Tag '<h1></h1>'
+2 - Content 'HTML and python'
+
+-----------------------------------------------------------------
+------------------------- HTML5 Headings ------------------------
+-----------------------------------------------------------------
+
+File: /resources/3-headings.html
+
+-----------------------------------------------------------------
+Note:
+There are elements which name have a particular meaning within the HTML 
+environment aand those are the ones containig keywords. These are called
+semantic elements.
+
+For instance the '<head></head>' element is meant to store a particular
+type of data used by the browser to correctly execute the HTML file. 
+There's alse the '<tilte></tilte>' element used to display a particular
+text within the tab bar where the HTML file is executed.
+
+Within a tag, besides of the name that can declare a semantic element there
+can be stored attributes as previously shown that cosnsits with a keywords
+and a value. The attributes can only be placed in the opening tag
+-----------------------------------------------------------------
+
+There are 6 levels of headings, starting from the highest being 1 
+which is the biggest. 
+
+-----------------------------------------------------------------
+------------------------ HTML5 Paragraphs -----------------------
+-----------------------------------------------------------------
+
+File: /resources/4-paragraphs.html
+
+Whenever is reequired to create text in HTML there can be used the 
+'<p></p>' to enclose a paragraph. Everithing within that tag will
+be considered a paragraph text
+
+Note: In case is required to test an HTML file meant to display text
+is often used the 'lorem'+enter combination to populate a field
+with a few lines of text.
+In case Is required to populate a field with n ammount of words 
+there can be used the 'loremN'+enter where N is the ammount of words
+required
+
+-----------------------------------------------------------------
+--------------------------- HTML5 Lists -------------------------
+-----------------------------------------------------------------
+
+File: /resources/5-lists.html
+
+Lists are used to create a data container.
+
+Thewre are two types:
+1 - Ordered : Enumerate elements of a list and are declared with the
+<ol></ol> tag
+2 - Unordered : Don't enumerate elements of a list and are declared 
+with the <ul></ul> tag
+
+Elements within a list have to be declared within one of the lists tags 
+and also between the element of list tag '<li></li>'
+
+Note: Comments in HTML are ignored by the web browser and are 
+enclosed within the self closing tag '<!-- -->'
+
+-----------------------------------------------------------------
+------------------------- HTML5 Tables --------------------------
+-----------------------------------------------------------------
+
+File: /resources/6-tables.html
+
+Tables are the closest resemblance that the HTML language have to 
+a database. A table is declared using the '<table></table>' tag. 
+Each row is declared using the '<tr></tr>'. Each column have a 
+heading declard using the '<th></th>' tag. Every row containing
+data for every column has to be encloses within the '<td></td>'
+as shown below
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone number</th>
+    </tr>
+    <tr>
+        <td>Walter White</td>
+        <td>Abuquerque</td>
+        <td>+1-00-0000000</td>
+    </tr>
+</table>
+
+The 1st '<tr></tr>' encloses the '<th></th>' tag and the ammount of 
+times this tag is used within the 1st '<th></th>' tag dictates the 
+ammount columns that the table will have. Then the next time there are is
+a '<tr></tr>' there should be used the '<td></td>' matching the 
+number of columns the table has and enclosing the data related 
+to each column
+
+-----------------------------------------------------------------
+-------------------------- HTML5 Links --------------------------
+-----------------------------------------------------------------
+
+File: /resources/7-links.html
+
+Links redirects the web browser to a part of the HTML file, another HTML 
+file or resource. The links within an HTML file are stored as an 
+attribute within the '<a><\a>' tag. This attribute is the 'href' 
+attribute storing the value of the resouce. This attribute is called 
+hyperlink.
+
+-----------------------------------------------------------------
+-------------------------- HTML5 Images -------------------------
+-----------------------------------------------------------------
+
+File: /resources/8-images.html
+
+Images can be embeded into webpages using HTML or CSS. In this case 
+the images will be (obviously) added using HTML.
+
+These images can be local resources or online resources.
+
+The images are embeded using the self closing tag '<img>'. This tag
+also have the 'src' attribute that stores the value where the resource
+can be found and also an alternative message to display in case the image
+cannot be shown under the 'alt' attribute
+
+<img src='' alt=''>
+
+To provide a local file within the directory of the HTML file's folder
+there must only be passed as the 'src' value the image name ('img.jpg').
+If the file is located in another path then that path must be provided as
+the value of the attribute 'src' ("/resources/folder/img.jpg"), and in
+case of being an online resource there then must be privded the image's 
+URL ("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Atardecer_en_naiguata.jpg/800px-Atardecer_en_naiguata.jpg")
+
+
+-----------------------------------------------------------------
+---------------------- HTML5 ID and Classes ---------------------
+-----------------------------------------------------------------
+
+File: /resources/9-id_and_classes.html
+
+Id and classes are attributes used to provide more information about a tag or
+the content of a tag to identify it among every other similar tags
+
+For instance, an '<h1></h1>' can be used within the HTML file as a title for
+an article, and for that case that particular tag could hold the particular
+attribute 'id' with the 'title' value.
+
+As well, classes are also used to identify a tag for further configuration 
+of the behaviour of the particular class a tag belongs within a style sheet.
+
+Both, id and classes can be used to provide style to a tag and such style 
+can be specified within a '<style></style>' tag within the '<head></head>'
+tag
+
+'<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a Simple HTML Page</title>
+    <style>
+        #title {
+            font-size: 50px;
+            color:grey;
+        }
+        .para {
+            background-color: blue;
+            color: brown;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">HTML and python</h1>
+    <p class = 'para'>This is a HTML paragraph used as an example within the HTML Python course</p>
+</body>
+</html>'
+
+Note: For class style the prefix is a '.' and for id style the prefix 
+is a '#'. Those styles store the values of their visual attributes within
+'{}'.
+
+It is a good practice to use unique IDs for every tag worth idetifying.
+Classes can be used over again as many times required
+
+-----------------------------------------------------------------
+-------------------------- HTML5 Forms --------------------------
+-----------------------------------------------------------------
+
+File: /resources/10-forms_1.html
+
+Forms are the way a website gets data from the user. These are present 
+whenever an user inputs login data, uploads an image, etc.
+
+These are declared by using the '<form></form>' tag and specifiying the 
+items or attributes. This particular type of tag recieve the type of tag
+that request from the user different type of inputs.
+
+Note: The '</br>' tag is used to break a line or to create a new line
+
+There are different input tags:
+- <input type = 'text' placeholder=""/> : This type of input field will
+allow the user to input a text and offer a message to identify the field.
+That message is meant to be the value of the 'placeholder' attribute.
+Note that this tag can have several other types such as 'number' that
+only allows numeric input.
+All of them can be seen in the next link:
+https://www.w3schools.com/html/html_form_input_types.asp
+- <input name= type = 'radio' value='' /> : This type of input allows to
+select one of several values, each value belonging to a same set of option
+must be identified by a 'name' and have to be asociated with a 'value', 
+both attributes then must be specified
+
+File: /resources/11-forms_2.html
+
+-<select name = "" id=""></select>: This type of input allows to select 
+a value form a collapsing list with a default value if nothing selected.
+The 'name' and 'id' attribute values have to be unique.
+The options of this list are inserted using the '<option value=""></option>'
+tag and the attribute 'value' has to correspond to the value that such 
+option contains. As well, the content of this tag is the one shown to the
+user. Consider that the 1st option will be the default if the user 
+decides to not interact with this form
+-<datalist id= "">: This type of selection list allows also the posibility 
+to select a value but without any default value. It also allows the usage 
+of a previous <input list = ''/> tag to include any value that is not 
+available on the collapsing list as a valid value
+
+File: /resources/12-forms_3.html
+
+-<textarea name="" id="" cols="" rows=""></textarea> : This input field 
+allows to input a text into a extense field with a default dimmension.
+The 'name' and 'id' attributes are meant to be used to identify the field,
+the 'col' and 'rows' attribute allows to stablish the defaul dimmensions
+of the field.
+-<button type='button'></button> : This tag allows to create a submit a 
+button. This can be from these types: 'button', 'reset', 'submit'. The
+content of the tag will be displayed to the user
+-<input type = 'submit' value = ''/> : The input type 'submit' creates a
+button to submit displaying the value of the 'value' attribute.
+
+File: /resources/13-forms_4.html
+
+-<input type = 'number' placeholder=""/> : This type of input allows only
+numeric values and 'e' as the euler number. The placeholder attribute will
+display any value
+-<input type = 'email' placeholder=""/> : This type of input allows only
+email adresses. The placeholder attribute will display any value
+-<input type = 'password' placeholder=""/> : This type of input allows the
+input of aphanumeric values for which input will display a dot or an 
+asterix for each character. The placeholder attribute will display any value
+-<input type = 'reset' /> : This type of input allows to reset every input.
+-<input type="file"/> : This type of input allows to upload a file
+-<input type="search" placeholder=""/> : This type of input allows to 
+input a searching input. The placeholder attribute will display any value
+-<input type="checkbox"/> : This type of input allows to select the 
+particular value/option to be selected.
+-<input type="url" placeholder="URL value"/> : This type of input allows 
+to input and URL type of text. The placeholder attribute will display 
+any value.
+
+-----------------------------------------------------------------
+---------------------- HTML5 Inline & Block ---------------------
+------------------------ level elements -------------------------
+-----------------------------------------------------------------
+
+File: /resources/14-inline_block.html
+
+Inline elements are a type of element allowed to be place one next to 
+another horizontally
+
+Block elements are a type of element allowed to be place une on top 
+another vertically
+
+Inline elements are designed by the '<span></span>'
+
+Block elements are designed by the '<div></div>' tag and dont allow to
+have another element in that line
+
+-----------------------------------------------------------------
+------------------------- HTML5 videos --------------------------
+-----------------------------------------------------------------
+
+File: /resources/15-videos.html
+
+Videos are placed using the next tag:
+<video height="" width="" src="" control></video>
+
+The present attributes are used to find the source and to get the 
+dimension. There has to be declared the attribute control to allow
+the webbrowser to employ the native controller to the video
+
+-----------------------------------------------------------------
+------------------------- HTML5 audios --------------------------
+-----------------------------------------------------------------
+
+File: /resources/16-audios.html
+
+Audios are placed using the next tag:
+<audio src="audio.wav" controls></audio>
+
+The present attributes are used to find the source. There has to be
+declared the attribute control to allow the webbrowser to employ the
+native controller to the video
+
+-----------------------------------------------------------------
+------------------------ HTML5 Semantic -------------------------
+--------------------------- elements ----------------------------
+-----------------------------------------------------------------
+
+File: /resources/17-semantic_elements.html
+
+There are several other elements worth knowing from the HTML structure:
+
+- <header></header>: This is a semantic element used to specify whats called
+the top of any website that contains elements like logos, main links 
+and several other elements
+- <nav></nav>: This is a semantic element is used to provide the main links.
+This tag is meant to be nested within the '<header></header>' tag
+- <main></main> : This is a semantic element is used to place the main
+elements of the website (several images, videos, lists). Every 
+super element will be portrayed as a section usin an auxiliar tag
+- <section></section> : This is a semantic element is used group super
+elements within the '<main></main>' tag
+- <articles></articles> : This is a semantic element is used to organize
+an article and grop every related element. 
+- <details></details> : This is a semantic element is used within the 
+'<articles></articles>' and is used to provide an structure and 
+functionallity an article. It can toggle between a resumed view and a 
+detailed one using an auxiliar tag.
+- <summary></summary> : 
